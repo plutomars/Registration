@@ -89,6 +89,7 @@
             this.txtRePwd.Name = "txtRePwd";
             this.txtRePwd.Size = new System.Drawing.Size(227, 20);
             this.txtRePwd.TabIndex = 5;
+            this.txtRePwd.UseSystemPasswordChar = true;
             // 
             // txtPwd
             // 
@@ -96,6 +97,7 @@
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(227, 20);
             this.txtPwd.TabIndex = 4;
+            this.txtPwd.UseSystemPasswordChar = true;
             // 
             // txtUserName
             // 
@@ -358,6 +360,7 @@
             this.btnSubmit.TabIndex = 2;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnClose
             // 
@@ -379,6 +382,7 @@
             this.Controls.Add(this.gbxAccount);
             this.Name = "Registeration";
             this.Text = "Registeration";
+            this.Load += new System.EventHandler(this.Registeration_Load);
             this.gbxAccount.ResumeLayout(false);
             this.gbxAccount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
