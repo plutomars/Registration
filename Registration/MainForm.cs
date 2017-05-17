@@ -36,16 +36,16 @@ namespace Registration
             return true;
         }
 
-        private bool login(string userName,string password) {
-            string cmdTxt = "SELECT COUNT(*) FROM testdb.account_info WHERE user_name =@user_name AND password =@password";
+        private bool login(string account,string password) {
+            string cmdTxt = "SELECT COUNT(*) FROM testdb.account_info WHERE account =@account AND password =@password";
             using (MySqlConnection conn = new MySqlConnection(connString)) {
                 MySqlCommand cmd = new MySqlCommand(cmdTxt,conn);
-                cmd.Parameters.Add("@user_name", MySqlDbType.VarChar);
+                cmd.Parameters.Add("@account", MySqlDbType.VarChar);
                 cmd.Parameters.Add("@password", MySqlDbType.VarChar);
 
                 string shaPwd = Utility.generateSHA(password);
 
-                cmd.Parameters["@user_name"].Value = userName;
+                cmd.Parameters["@account"].Value = account;
                 cmd.Parameters["@password"].Value = shaPwd;
 
                 try

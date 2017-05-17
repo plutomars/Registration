@@ -88,6 +88,9 @@
     <EmbeddedResource Include="Registeration.resx">
       <DependentUpon>Registeration.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="party.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="states.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

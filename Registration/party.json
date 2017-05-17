@@ -1,0 +1,26 @@
+﻿[
+  {
+    "party_type": "",
+    "value": ""
+  },
+  {
+    "party_type": "Republican",
+    "value": "republican"
+  },
+  {
+    "party_type": "Democrat",
+    "value": "democrat"
+  },
+  {
+    "party_type": "Independent",
+    "value": "independent"
+  },
+  {
+    "party_type": "Other",
+    "value": "other"
+  },
+  {
+    "party_type": "None",
+    "value": "none"
+  }
+]

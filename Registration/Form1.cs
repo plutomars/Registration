@@ -94,7 +94,11 @@ namespace Registration
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Utility.createStatesTable();
+            //Utility.createStatesTable();
+            //comboBox1.DataSource = Utility.createStatesTable();
+            //comboBox1.DisplayMember = "fullname";
+            comboBox1.DataSource = Utility.createPartiesTable();
+            comboBox1.DisplayMember = "party_type";
         }
 
         private void button4_Click(object sender, EventArgs e)
