@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
+
 
 namespace Registration
 {
@@ -20,5 +24,19 @@ namespace Registration
 
             return "*" + myBuilder.ToString();
         }
+
+        public static void createStatesTable() {
+            JObject obj = JObject.Parse(File.ReadAllText(@".\states.json"));
+            List<JObject> list = new List<JObject>();
+
+            using (StreamReader file = File.OpenText(@".\states.json"))
+            using (JsonTextReader reader = new JsonTextReader(file)) {
+                JObject states = (JObject)JToken.ReadFrom(reader);
+                list.Add(states);
+            }
+
+            
+        }
+
     }
 }

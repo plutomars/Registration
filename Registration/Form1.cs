@@ -94,9 +94,7 @@ namespace Registration
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string user_name = textBox1.Text.Trim();
-            string password = textBox2.Text.Trim();
-            CreateNewUser(user_name, password);
+            Utility.createStatesTable();
         }
 
         private void button4_Click(object sender, EventArgs e)
