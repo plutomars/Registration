@@ -90,6 +90,7 @@
             this.txtRePwd.Size = new System.Drawing.Size(227, 20);
             this.txtRePwd.TabIndex = 5;
             this.txtRePwd.UseSystemPasswordChar = true;
+            this.txtRePwd.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
             // 
             // txtPwd
             // 
@@ -105,6 +106,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(227, 20);
             this.txtUserName.TabIndex = 3;
+            this.txtUserName.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
             // 
             // lblRePwd
             // 
@@ -172,6 +174,7 @@
             this.cbxPolitical.Name = "cbxPolitical";
             this.cbxPolitical.Size = new System.Drawing.Size(227, 21);
             this.cbxPolitical.TabIndex = 20;
+            this.cbxPolitical.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
             // 
             // lblPolitical
             // 
@@ -188,6 +191,7 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(227, 20);
             this.txtemail.TabIndex = 18;
+            this.txtemail.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
             // 
             // lblEmail
             // 
@@ -204,6 +208,7 @@
             this.txtCell.Name = "txtCell";
             this.txtCell.Size = new System.Drawing.Size(227, 20);
             this.txtCell.TabIndex = 16;
+            this.txtCell.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
             // 
             // lblCell
             // 
@@ -221,6 +226,7 @@
             this.cbxState.Name = "cbxState";
             this.cbxState.Size = new System.Drawing.Size(227, 21);
             this.cbxState.TabIndex = 14;
+            this.cbxState.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
             // 
             // txtCity
             // 
@@ -228,6 +234,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(227, 20);
             this.txtCity.TabIndex = 13;
+            this.txtCity.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
             // 
             // lblState
             // 
@@ -253,15 +260,16 @@
             this.txtBirthdate.Name = "txtBirthdate";
             this.txtBirthdate.Size = new System.Drawing.Size(227, 20);
             this.txtBirthdate.TabIndex = 10;
+            this.txtBirthdate.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
             // 
             // lblBirth
             // 
             this.lblBirth.AutoSize = true;
             this.lblBirth.Location = new System.Drawing.Point(11, 178);
             this.lblBirth.Name = "lblBirth";
-            this.lblBirth.Size = new System.Drawing.Size(49, 13);
+            this.lblBirth.Size = new System.Drawing.Size(114, 13);
             this.lblBirth.TabIndex = 9;
-            this.lblBirth.Text = "Birthdate";
+            this.lblBirth.Text = "Birthdate (yyyy-MM-dd)";
             // 
             // panel1
             // 
@@ -310,6 +318,7 @@
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(227, 20);
             this.txtLast.TabIndex = 7;
+            this.txtLast.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
             // 
             // txtMid
             // 
@@ -324,6 +333,7 @@
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(227, 20);
             this.txtFirst.TabIndex = 5;
+            this.txtFirst.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
             // 
             // lblLast
             // 
@@ -370,6 +380,7 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Registeration
             // 

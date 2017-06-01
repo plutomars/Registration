@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.gbxLogin = new System.Windows.Forms.GroupBox();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.lblPwd = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPwd = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Button();
+            this.txtPwd = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.lblPwd = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.btnNew = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbxLogin.SuspendLayout();
@@ -54,31 +54,15 @@
             this.gbxLogin.TabStop = false;
             this.gbxLogin.Text = "Login";
             // 
-            // lblUserName
+            // lblLogin
             // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(16, 36);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(57, 13);
-            this.lblUserName.TabIndex = 0;
-            this.lblUserName.Text = "UserName";
-            // 
-            // lblPwd
-            // 
-            this.lblPwd.AutoSize = true;
-            this.lblPwd.Location = new System.Drawing.Point(16, 75);
-            this.lblPwd.Name = "lblPwd";
-            this.lblPwd.Size = new System.Drawing.Size(53, 13);
-            this.lblPwd.TabIndex = 1;
-            this.lblPwd.Text = "Password";
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(84, 33);
-            this.txtUserName.MaxLength = 20;
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(128, 20);
-            this.txtUserName.TabIndex = 2;
+            this.lblLogin.Location = new System.Drawing.Point(19, 112);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(193, 23);
+            this.lblLogin.TabIndex = 4;
+            this.lblLogin.Text = "Login";
+            this.lblLogin.UseVisualStyleBackColor = true;
+            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
             // txtPwd
             // 
@@ -89,14 +73,31 @@
             this.txtPwd.TabIndex = 3;
             this.txtPwd.UseSystemPasswordChar = true;
             // 
-            // lblLogin
+            // txtUserName
             // 
-            this.lblLogin.Location = new System.Drawing.Point(19, 112);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(193, 23);
-            this.lblLogin.TabIndex = 4;
-            this.lblLogin.Text = "Login";
-            this.lblLogin.UseVisualStyleBackColor = true;
+            this.txtUserName.Location = new System.Drawing.Point(84, 33);
+            this.txtUserName.MaxLength = 20;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(128, 20);
+            this.txtUserName.TabIndex = 2;
+            // 
+            // lblPwd
+            // 
+            this.lblPwd.AutoSize = true;
+            this.lblPwd.Location = new System.Drawing.Point(16, 75);
+            this.lblPwd.Name = "lblPwd";
+            this.lblPwd.Size = new System.Drawing.Size(53, 13);
+            this.lblPwd.TabIndex = 1;
+            this.lblPwd.Text = "Password";
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Location = new System.Drawing.Point(16, 36);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(57, 13);
+            this.lblUserName.TabIndex = 0;
+            this.lblUserName.Text = "UserName";
             // 
             // btnNew
             // 
@@ -106,6 +107,7 @@
             this.btnNew.TabIndex = 5;
             this.btnNew.Text = "Create New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // groupBox1
             // 

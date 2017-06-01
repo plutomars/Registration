@@ -17,6 +17,7 @@ namespace Registration
 
         const string connString = "Server=localhost;Database=testdb;Uid=tester;Pwd=test";
         private MySqlConnection mysqlConn;
+        BaseWindow bs = new BaseWindow();
 
 
         public MainForm()
@@ -59,6 +60,19 @@ namespace Registration
                 }
             }
             return false;
+        }
+
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            Registeration rs = new Registeration(this);
+            this.Hide();
+            rs.Show(this);
+            //this.Close();
         }
     }
 }
